@@ -1,0 +1,7 @@
+name: KGE
+
+dependencies:
+  - pip
+  - pip:
+    - rdflib
+    - striprtf
