@@ -5,3 +5,8 @@ dependencies:
   - pip:
     - rdflib
     - striprtf
+    - opencv-python
+    - pandas
+    - shapely
+    - numpy
+  
