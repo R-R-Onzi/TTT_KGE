@@ -1,0 +1,42 @@
+line_id	line_name
+0	3 - Cortesano Gardolo P.Dante Villazzano 3
+1	5 - Piazza Dante P.Fiera Povo Oltrecastello
+2	7 - Canova Melta Piazza Dante Gocciadoro
+3	8 - Centochiavi Piazza Dante Mattarello
+4	9 - P.Dante S.Donà Cognola Villamontagna
+5	10 - P.Dante Martignano Cognola / Montevaccino
+6	12 - P.Dante Via Ghiaie Ravina Romagnano
+7	14 - P.Dante Via Sanseverino Belvedere Ravina
+8	11 - Piazza Dante Via Brennero Gardolo Spini
+9	NP - Navetta Parcheggi: Zuffo M.Te Baldo Zuffo
+10	13 - P.Dante Rosmini S.Rocco Povo Polo Soc.
+11	15 - Piazza Dante Interporto Spini Di Gardolo
+12	16 - Centochiavi Martignano Cognola Povo
+13	7 - Moietto Rosmini Campana Dei Caduti
+14	Fu - Funivia Trento Sardagna
+15	"C - Rsa ""S.Bart."" ""Angeli Custodi"" Laste"
+16	5/ - P.Dante P.Fiera Università Mesiano Povo
+17	1 - Ospedale P.Dante Sopramonte
+18	2 - Piedic. Stazione Osp.S.Chiara Regione Piedic.
+19	4 - Gardolo Roncafort Stazione V.Deg. Mad.Bianca
+20	6 - Vela P.Dante Villazzano Grotta
+21	17 - Piazza Dante Via Bolzano Lamar Lavis
+22	A - Brione Cesari Ospedale Podesta' Brione
+23	B - Ossario Osp. S.Giorgio Osp. Ossario
+24	AB - Via Magazol S.Giorgio Cornacalda
+25	G - Gardolo Gardolo Di Mezzo E Spini
+26	CM - Povo Borino Celva Passo Cimirlo
+27	1 - (Volano) Bettini Staz. Lizzana Marco
+28	6 - Costa Corso Rosmini S.Giorgio/Ospedale
+29	2 - Nomi Villa Lagarina Stazione Mori
+30	3 - 03 Peders. Brione Stazione Isera (Lenzima)
+31	4 - Villa Lag. Brione Staz. Isera Lenzima
+32	5 - Ospedale Stazione Isera Villa Lagar.
+33	V - Volano Besenello Calliano Nomi
+34	P - Castellano Molini Villa Lagarina
+35	S - Savignano Pomarolo
+36	L1 - 01 Lavis Pressano Nave S.Felice Sorni
+37	L3 - 03 Lavis Stazione Fs
+38	L4 - 04 Lavis Zona Industriale Lavis
+39	L2 - 02 Lavis Pressano Masi Sp.131 Sorni
+40	A - P.Dante Ospedale Fersina Clarina P.Dante

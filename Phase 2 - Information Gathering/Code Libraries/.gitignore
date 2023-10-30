@@ -1,0 +1,5 @@
+# ignore root folder .gitignore
+!*
+
+# last year rdf, > 100 MB, can't commit
+busses/EG RDF.rdf
