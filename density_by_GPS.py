@@ -5,6 +5,9 @@ import numpy as np
 import argparse
 from os import walk
 import math
+from collections import defaultdict
+import itertools
+
 
 def main(path, files):
     
@@ -19,7 +22,8 @@ def main(path, files):
     list_name_location = []
     long = []
     lat = []
-    result_csv = []
+    result_csv = defaultdict(list)
+    colours = dict(zip(df["name"], itertools.count()))
 
     for i in range(df["boundary"].size):
         list_coord.extend([df["boundary"][i].replace('))', '')])
@@ -49,8 +53,7 @@ def main(path, files):
     for i in list_name_location:
 
         polygon_points = return_zip(i, (min_lat, max_lat, min_long, max_long))
-        
-        result_csv.update([{"name" : list_name_location[i][0], "polygon" : polygon_points}])
+
         
         # for k in range(len(polygon_points)) :
             
@@ -59,18 +62,16 @@ def main(path, files):
         #         break
             
         #     blank_image = cv.line(blank_image, polygon_points[k], polygon_points[k+1], color[j%23], 2)
-
-        blank_image = cv.polylines(blank_image, [polygon_points], True, color[j%23], 3)
+        list_name_location[j][1] = polygon_points
+        blank_image = cv.polylines(blank_image, [polygon_points], True, color[colours[i[0]]], 3)
         
         j = j + 1
         polygon_points = []
 
         cv.imwrite(f"{j}.jpg", blank_image)
-        
-    
-    cv.imwrite(f"in.jpg", blank_image)
+    j = 0
 
-    if ("bus_stops" in path):
+    if ("bus_stop" in path):
         delim = ","
         points_parse = points_parse_separated
         aim_coord = ["stop_lat", "stop_lon"]
@@ -105,26 +106,32 @@ def main(path, files):
                 continue
             
             point_lat = scale(point_lat, max_lat, min_lat)
+            scaled_point = (point_lon, point_lat)
 
-            blank_image = cv.circle(blank_image, (point_lon, point_lat), radius=1, color=(255, 255, 255), thickness=3)
-            
-            try_to_find_circo(list_name_location, (point_lon, point_lat))
+            result = inside_circoscrizione(list_name_location, scaled_point)
+            if (result):
+                result_csv[result].append(scaled_point)
+                blank_image = cv.circle(blank_image, scaled_point, radius=1, color=color[colours[result]], thickness=3)
+        results = defaultdict(list)
 
-        j = 0
-        
-    df = pd.DataFrame()
+        for key, value in result_csv.items():
+            results["name"].append(key)
+            results["density"].append(len(value))
+            results["points"].append(value)
+    df = pd.DataFrame(results)
 
-    df.to_csv(index=False)
+    df.to_csv("results.csv", index=False)
 
     cv.imwrite("bana.jpg", blank_image)
     blank_image = cv.flip(blank_image, 0)
     cv.imwrite("normal.jpg", blank_image)
 
-def try_to_find_circo(list_name_location, point):
-    
-    for (name, poly) in list_name_location:
-        if (cv.pointPolygonTest(point, poly[1], False) <= 0):
-            return poly
+def inside_circoscrizione(list_name_location, point):
+
+    for i in list_name_location:
+        if (cv.pointPolygonTest(i[1], point, False) >= 0):
+            return i[0]
+    return False
 
 def scale(metrics, max, min):
     if type(metrics) is list:
