@@ -1,9 +1,30 @@
 import csv
 from rdflib import RDF, Graph, URIRef
 
+from shapely.geometry import Point
+from shapely import from_wkt
+
 # KGE 2022 - Trentino Urban Transportation
 BUSSES_RDF = './EG RDF.rdf'
 BASE_URI = "http://knowdive.disi.unitn.it/etype#"
+
+CIRCOSCRIZIONI_FILE = '../area-population/city_areas.txt'
+
+with open(CIRCOSCRIZIONI_FILE, 'r') as areas_file:
+    city_areas = list(csv.reader(areas_file, delimiter='\t'))[1:]
+
+    all_city_polygons = {}
+    for region in city_areas:
+        region_id = region[0]        
+        region_polygon = from_wkt(region[3])
+        all_city_polygons[region_id] = region_polygon.buffer(0)
+
+    
+def get_city_area(long, lat):
+    for id, polygon in all_city_polygons.items():
+        if Point(long, lat).within(polygon):
+            return id
+    return None
 
 g = Graph()
 g.parse(BUSSES_RDF)
@@ -53,10 +74,12 @@ for line in g.subjects(RDF.type, URIRef(BASE_URI + "Line_GID-46379")):
                 
                 for stop in g.objects(schedule, URIRef(BASE_URI + "has_stops_GID-5446_Type-34818")):
                     bus_stop_name = g.value(stop, URIRef(BASE_URI + "has_name_GID-34017_Type-132")).toPython()                    
-                    bus_long = g.value(stop, URIRef(BASE_URI + "has_longitude_GID-46270_Type-132")).toPython()                    
-                    bus_lat = g.value(stop, URIRef(BASE_URI + "has_latitude_GID-46264_Type-132")).toPython()                                        
+                    bus_stop_long = float(g.value(stop, URIRef(BASE_URI + "has_longitude_GID-46270_Type-132")).toPython())
+                    bus_stop_lat = float(g.value(stop, URIRef(BASE_URI + "has_latitude_GID-46264_Type-132")).toPython())
 
-                    trip_schedules.append([schedule_stop_sequence, schedule_arrival_time, bus_stop_name, float(bus_long), float(bus_lat)])                    
+                    bus_stop_city_area_id = get_city_area(bus_stop_long, bus_stop_lat)
+                    
+                    trip_schedules.append([schedule_stop_sequence, schedule_arrival_time, bus_stop_name, bus_stop_long, bus_stop_lat, bus_stop_city_area_id])                    
 
             # sort by stop sequence
             trip_schedules.sort(key=lambda x: int(x[0]))
@@ -89,6 +112,6 @@ writer = csv.writer(rides_file, delimiter='\t')
 writer.writerows(trips)
 
 stops_file = open("./bus_stops_schedules.txt", 'w')
-stops_file.write("stop_id\tarrival_time\tstop_name\tstop_longitude\tstop_latitude\tnext_stop_id\n")
+stops_file.write("stop_id\tarrival_time\tstop_name\tstop_longitude\tstop_latitude\tstop_city_area_id\tnext_stop_id\n")
 writer = csv.writer(stops_file, delimiter='\t')
 writer.writerows(bus_stops)
