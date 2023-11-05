@@ -146,7 +146,7 @@ def main(folder, **kwargs):
                     bus_stop_csv["stop_num_in_trip"].append(f"{i + 1}")
                     bus_stop_csv["arrival_time"].append(f"{stop_times_line['arrival_time'].iloc[i]}")
                     bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
-                    bus_stop_csv["city_area"].append(f"{stop_times_line['departure_time'].iloc[i + 1]}")
+                    bus_stop_csv["city_area"].append(f"{j[0]}")
                     written = True
                     
                     break

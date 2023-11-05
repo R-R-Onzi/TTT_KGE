@@ -12,7 +12,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["--folder","~/Documenti/code/python/TTT_KGE/services"]
+            "args": ["--folder","~/Documents/code/TTT_KGE/transporti"]
         }
     ]
 }
