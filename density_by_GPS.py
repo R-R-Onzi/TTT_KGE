@@ -101,6 +101,8 @@ def main(path, files):
             point_lat = float(point[0])
             point_lon = float(point[1])
             
+            gps_point = [float(point[0]), float(point[1])]
+            
             if point_lon < min_long or point_lon > max_long:
                 continue
             point_lon = scale(point_lon, max_long, min_long)
@@ -115,7 +117,7 @@ def main(path, files):
 
             result = inside_circoscrizione(list_name_location, scaled_point)
             if (result):
-                result_csv = append_to_dict(result_csv, result, scaled_point, df_points, point[2])
+                result_csv = append_to_dict(result_csv, result, scaled_point, df_points, point[2], gps_point)
                 blank_image = cv.circle(blank_image, scaled_point, radius=1, color=color[colours[result]], thickness=3)
 
     df = pd.DataFrame(dict_transform(result_csv, df))
@@ -126,15 +128,15 @@ def main(path, files):
     blank_image = cv.flip(blank_image, 0)
     cv.imwrite("normal.jpg", blank_image)
 
-def append_normaly(result_csv, result, scaled_point, df=None, point=None):
+def append_normaly(result_csv, result, scaled_point, df=None, point=None, gps=None):
     result_csv[result].append(scaled_point)
     
     return result_csv
     
-def append_services(result_csv, result, scaled_point, df, point):
+def append_services(result_csv, result, scaled_point, df, point, gps_point):
     line = df.loc[df['WKT'] == f"POINT ({point[0]} {point[1]})"]
     
-    result_csv[result].append([f"{point[0]} {point[1]}", 
+    result_csv[result].append([f"{gps_point[0]} {gps_point[1]}", 
                                str(line["tipo"].iloc[0]) if line["tipo"].any(axis=None) else "",
                                str(line["nome"].iloc[0]) if line["nome"].any(axis=None) else ""])
 
