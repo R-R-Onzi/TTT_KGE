@@ -75,16 +75,22 @@ def main(path, files):
         delim = ","
         points_parse = points_parse_separated
         aim_coord = ["stop_lat", "stop_lon"]
+        dict_transform = only_coord
+        append_to_dict = append_normaly
 
     elif ("catering" in path):
         delim = "\t"
         points_parse = points_parse_joined
         aim_coord = "coordinates"
+        dict_transform = only_coord
+        append_to_dict = append_normaly
     
     elif ("services"):
         delim = ";"
         points_parse = points_parse_UTM
         aim_coord = "WKT"
+        dict_transform = coord_type
+        append_to_dict = append_services
 
     for file in files:
         
@@ -110,21 +116,70 @@ def main(path, files):
 
             result = inside_circoscrizione(list_name_location, scaled_point)
             if (result):
-                result_csv[result].append(scaled_point)
+                result_csv = append_to_dict(result_csv, result, scaled_point, df_points, point[2])
                 blank_image = cv.circle(blank_image, scaled_point, radius=1, color=color[colours[result]], thickness=3)
-        results = defaultdict(list)
 
-        for key, value in result_csv.items():
-            results["name"].append(key)
-            results["density"].append(len(value))
-            results["points"].append(value)
-    df = pd.DataFrame(results)
+    df = pd.DataFrame(dict_transform(result_csv, df))
 
     df.to_csv("results.csv", index=False)
 
     cv.imwrite("bana.jpg", blank_image)
     blank_image = cv.flip(blank_image, 0)
     cv.imwrite("normal.jpg", blank_image)
+
+def append_normaly(result_csv, result, scaled_point, df=None, point=None):
+    result_csv[result].append(scaled_point)
+    
+    return result_csv
+    
+def append_services(result_csv, result, scaled_point, df, point):
+    line = df.loc[df['WKT'] == f"POINT ({point[0]} {point[1]})"]
+    
+    result_csv[result].append([f"{point[0]} {point[1]}", 
+                               str(line["tipo"].iloc[0]) if line["tipo"].any(axis=None) else "",
+                               str(line["nome"].iloc[0]) if line["nome"].any(axis=None) else ""])
+
+    if (len(line["tipo"]) > 1):
+        df.drop(df.loc[df['WKT'] == f"POINT ({point[0]} {point[1]})"].index[0], inplace=True)
+
+    return result_csv
+
+def only_coord(result_csv, df):
+    results = defaultdict(list)
+
+    for key, value in result_csv.items():
+        results["name"].append(key)
+        results["density"].append(len(value))
+        results["points"].append(value)
+    
+    return results
+
+def coord_type(result_csv, df):
+    results = defaultdict(list)
+    
+    for key, value in result_csv.items():
+        for place in value:
+            if (key):
+                results["name"].append(key)
+            else:
+                results["name"].append("")
+                
+            if ("NaN"  not in place[1]):
+                results["product_category"].append(place[1])
+            else:
+                results["product_category"].append("")
+            
+            if ("NaN" not in place[2] ):
+                results["store_name"].append(place[2])
+            else:
+                results["store_name"].append("")
+
+            if ("NaN" not in place[0]):
+                results["points"].append(f"POINT ({place[0]})")
+            else:
+                results["points"].append("")
+        
+    return results
 
 def inside_circoscrizione(list_name_location, point):
 
@@ -176,9 +231,9 @@ def points_parse_UTM(df_points, name):
         
         lat, long = point_parsed.split(' ')
         
-        [point_lat, point_lon] = convert(float(long), float(lat))
+        [point_lat, point_lon] = convert(float(lat), float(long))
 
-        yield [point_lat, point_lon]
+        yield [point_lat, point_lon, [float(lat), float(long)]]
 
 def convert(x, y, utmz=32):
     DatumEqRad = [6378137.0,
