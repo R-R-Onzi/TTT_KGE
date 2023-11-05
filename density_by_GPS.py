@@ -53,7 +53,6 @@ def main(path, files):
     for i in list_name_location:
 
         polygon_points = return_zip(i, (min_lat, max_lat, min_long, max_long))
-
         
         # for k in range(len(polygon_points)) :
             
@@ -210,7 +209,7 @@ def points_parse_separated(df_points, name):
         point_lat = df_points[name[0]][i]
         point_lon = df_points[name[1]][i]
     
-        yield [point_lat, point_lon]
+        yield [point_lat, point_lon, None]
 
 
 def points_parse_joined(df_points, name):
