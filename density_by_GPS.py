@@ -125,11 +125,12 @@ def main(path, files):
     df.to_csv("results.csv", index=False)
     df_ca = pd.read_csv("city_areas.txt", delimiter="\t")
     results = defaultdict(list)
+    result_csv
     for name in df_ca['name']:
         line = df.loc[df['name'] == name]
         line_ca = df_ca.loc[df_ca['name'] == name]
         results['name'].append(name)
-        results['density'].append(len(line))
+        results['density'].append(len(result_csv[name]))
         results['boundary'].append(line_ca["boundary"].iloc[0])
 
     df = pd.DataFrame(results)
