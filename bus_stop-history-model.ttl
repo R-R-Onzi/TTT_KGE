@@ -1,0 +1,10 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1hegv1ng9x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "bus_stop_results.csv" ;
+	km-dev:modelPublicationTime "1699228999177"^^<http://www.w3.org/2001/XMLSchema#long> ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasModelLabel "bus_stop_results.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory "[]" .
