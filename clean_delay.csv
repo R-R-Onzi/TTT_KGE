@@ -1,1 +1,1 @@
-delay,trip_id
+delay_id,trip_id,predicted_delay,actual_delay

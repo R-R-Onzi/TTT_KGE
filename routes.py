@@ -18,7 +18,7 @@ def main(folder, **kwargs):
     
     routes_csv: defaultdict = defaultdict(list)
     trip_csv: defaultdict = defaultdict(list)
-    bus_stop_csv: defaultdict = defaultdict(list)
+    bus_stop_csv_true: defaultdict = defaultdict(list)
     
     df = pd.read_csv("city_areas.txt", delimiter="\t")
 
@@ -89,7 +89,8 @@ def main(folder, **kwargs):
         trip_csv["trip_headsign"].append(f'{trip_line["trip_headsign"].iloc[0]}')
 
         stop_times = df_stop_times.loc[df_stop_times['trip_id'] == f'{trip_line["trip_id"].iloc[0]}']
-
+        bus_stop_csv: defaultdict = defaultdict(list)
+        should_add = False
         for i in range(len(stop_times)):
 
             stop_line = df_stops.loc[df_stops["stop_id"] == int(stop_times['stop_id'].iloc[i])]
@@ -148,7 +149,7 @@ def main(folder, **kwargs):
                     bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                     bus_stop_csv["city_area"].append(f"{j[0]}")
                     written = True
-                    
+                    should_add = True
                     break
 
             if(not written):
@@ -160,8 +161,19 @@ def main(folder, **kwargs):
                 bus_stop_csv["arrival_time"].append(f"{stop_times_line['arrival_time'].iloc[i]}")
                 bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                 bus_stop_csv["city_area"].append("")
-    
-    pd.DataFrame(bus_stop_csv).to_csv("bus_stop_results.csv", index=False)
+
+        if(should_add):
+            for i in range(len(bus_stop_csv["stop_id"])):
+                bus_stop_csv_true["stop_id"].append(bus_stop_csv["stop_id"][i])
+                bus_stop_csv_true["route_id"].append(bus_stop_csv["route_id"][i])
+                bus_stop_csv_true["trip_id"].append(bus_stop_csv["trip_id"][i])
+                bus_stop_csv_true["next_stop_id"].append(bus_stop_csv["next_stop_id"][i])
+                bus_stop_csv_true["stop_num_in_trip"].append(bus_stop_csv["stop_num_in_trip"][i])
+                bus_stop_csv_true["arrival_time"].append(bus_stop_csv["arrival_time"][i])
+                bus_stop_csv_true["departure_time"].append(bus_stop_csv["departure_time"][i])
+                bus_stop_csv_true["city_area"].append(bus_stop_csv["city_area"][i])
+        
+    pd.DataFrame(bus_stop_csv_true).to_csv("bus_stop_results.csv", index=False)
     pd.DataFrame(trip_csv).to_csv("trip_results.csv", index=False)
     pd.DataFrame(routes_csv).to_csv("routes_results.csv", index=False)
 
