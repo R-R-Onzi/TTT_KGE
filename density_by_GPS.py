@@ -123,10 +123,19 @@ def main(path, files):
     df = pd.DataFrame(dict_transform(result_csv, df))
 
     df.to_csv("results.csv", index=False)
+    df_ca = pd.read_csv("city_areas.txt", delimiter="\t")
+    results = defaultdict(list)
+    for name in df_ca['name']:
+        line = df.loc[df['name'] == name]
+        line_ca = df_ca.loc[df_ca['name'] == name]
+        results['name'].append(name)
+        results['density'].append(len(line))
+        results['boundary'].append(line_ca["boundary"].iloc[0])
 
-    cv.imwrite("bana.jpg", blank_image)
+    df = pd.DataFrame(results)
+    df.to_csv("results_ca.csv", index=False)
     blank_image = cv.flip(blank_image, 0)
-    cv.imwrite("normal.jpg", blank_image)
+
 
 def append_normaly(result_csv, result, scaled_point, df=None, point=None, gps=None):
     result_csv[result].append(scaled_point)
