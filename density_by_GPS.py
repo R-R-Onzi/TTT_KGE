@@ -88,7 +88,7 @@ def main(path, files):
         delim = ";"
         points_parse = points_parse_UTM
         aim_coord = "WKT"
-        dict_transform = coord_type
+        dict_transform = coord_type_id
         append_to_dict = append_services
 
     for file in files:
@@ -146,7 +146,7 @@ def append_normaly(result_csv, result, scaled_point, df=None, point=None, gps=No
 def append_services(result_csv, result, scaled_point, df, point, gps_point):
     line = df.loc[df['WKT'] == f"POINT ({point[0]} {point[1]})"]
     
-    result_csv[result].append([f"{gps_point[0]} {gps_point[1]}", 
+    result_csv[result].append([f"{gps_point[1]} {gps_point[0]}", 
                                str(line["tipo"].iloc[0]) if line["tipo"].any(axis=None) else "",
                                str(line["nome"].iloc[0]) if line["nome"].any(axis=None) else ""])
 
@@ -165,11 +165,13 @@ def only_coord(result_csv, df):
     
     return results
 
-def coord_type(result_csv, df):
+def coord_type_id(result_csv, df):
     results = defaultdict(list)
     
     for key, value in result_csv.items():
         for place in value:
+            results["id"].append(str(len(results["id"])))
+
             if (key):
                 results["name"].append(key)
             else:
