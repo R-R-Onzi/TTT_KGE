@@ -76,7 +76,10 @@
 							<x0:EntityRelationshipModel.title>bus_stop</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
-									<sys:String>arrival_times:schedule</sys:String>
+									<sys:String><![CDATA[id: int]]></sys:String>
+									<sys:String><![CDATA[name: string]]></sys:String>
+									<sys:String><![CDATA[coordinates: location]]></sys:String>
+									<sys:String><![CDATA[schedule: schedule]]></sys:String>
 								</x:Array>
 							</x0:EntityRelationshipModel.attributes>
 						</x0:EntityRelationshipModel>
@@ -472,6 +475,23 @@
 			<port name="p36">
 				<data key="d16">
 					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9924385633270321"/>
+				</data>
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p37">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
+			<port name="p38">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9930555555555556,0.5"/>
 				</data>
 				<data key="d18">
 					<y:ViewState>
@@ -1413,7 +1433,7 @@
 		<node id="n5">
 			<data key="d0">5</data>
 			<data key="d5">
-				<y:RectD X="383.2599227453193" Y="677.4501036633383" Width="142" Height="99.75"/>
+				<y:RectD X="383.2599227453193" Y="637.8071476133382" Width="142" Height="99.75"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="#FFECE8E0" insetFill="#FFE3C8B7" stroke="{y:GraphMLReference 2}">
@@ -1422,8 +1442,8 @@
 							<x0:EntityRelationshipModel.title>location</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
-									<sys:String>latitude:float</sys:String>
-									<sys:String>longitude:float</sys:String>
+									<sys:String><![CDATA[latitude: float]]></sys:String>
+									<sys:String><![CDATA[longitude: float]]></sys:String>
 									<sys:String></sys:String>
 								</x:Array>
 							</x0:EntityRelationshipModel.attributes>
@@ -1527,6 +1547,13 @@
 					</y:ViewState>
 				</data>
 			</port>
+			<port name="p9">
+				<data key="d18">
+					<y:ViewState>
+						<y:Port x:Key="c|view"/>
+					</y:ViewState>
+				</data>
+			</port>
 		</node>
 		<node id="n6">
 			<data key="d0">6</data>
@@ -1540,9 +1567,9 @@
 							<x0:EntityRelationshipModel.title>delay</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
-									<sys:String>id:int</sys:String>
-									<sys:String>predicted_delay_time:string</sys:String>
-									<sys:String>actual_delay_time:string</sys:String>
+									<sys:String><![CDATA[id: int]]></sys:String>
+									<sys:String><![CDATA[predicted_delay_time: string]]></sys:String>
+									<sys:String><![CDATA[actual_delay_time: string]]></sys:String>
 									<sys:String></sys:String>
 								</x:Array>
 							</x0:EntityRelationshipModel.attributes>
@@ -1650,10 +1677,10 @@
 							<x0:EntityRelationshipModel.title>bus_trip</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
-									<sys:String>id:int</sys:String>
-									<sys:String>seats:int</sys:String>
-									<sys:String>bus_id:int</sys:String>
-									<sys:String>weekdays:string</sys:String>
+									<sys:String><![CDATA[id: int]]></sys:String>
+									<sys:String><![CDATA[seats: int]]></sys:String>
+									<sys:String><![CDATA[bus_id: int]]></sys:String>
+									<sys:String><![CDATA[weekdays: string]]></sys:String>
 								</x:Array>
 							</x0:EntityRelationshipModel.attributes>
 						</x0:EntityRelationshipModel>
@@ -2095,6 +2122,18 @@
 				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 15}">
 					<yjs:PolylineEdgeStyle.targetArrow>
 						<yjs:Arrow type="SHORT" stroke="#FF000000" fill="BLACK" cropLength="1"/>
+					</yjs:PolylineEdgeStyle.targetArrow>
+					<yjs:PolylineEdgeStyle.sourceArrow>
+						<yjs:Arrow type="NONE" stroke="#FF000000" fill="BLACK"/>
+					</yjs:PolylineEdgeStyle.sourceArrow>
+				</yjs:PolylineEdgeStyle>
+			</data>
+		</edge>
+		<edge id="e8" source="n0" target="n5" sourceport="p38" targetport="p9">
+			<data key="d13">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 15}">
+					<yjs:PolylineEdgeStyle.targetArrow>
+						<yjs:Arrow stroke="#FF000000" fill="BLACK" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
 					<yjs:PolylineEdgeStyle.sourceArrow>
 						<yjs:Arrow type="NONE" stroke="#FF000000" fill="BLACK"/>
