@@ -21,18 +21,18 @@
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_coordinates -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_category -->
 
-    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_coordinates">
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_category">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#facility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_facility_category -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_coordinates -->
 
-    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_facility_category">
+    <owl:DatatypeProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_coordinates">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#facility"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>

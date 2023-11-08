@@ -1041,7 +1041,7 @@
 									<sys:String><![CDATA[id: int]]></sys:String>
 									<sys:String><![CDATA[name: string]]></sys:String>
 									<sys:String><![CDATA[coordinates: location]]></sys:String>
-									<sys:String><![CDATA[facility_category: string]]></sys:String>
+									<sys:String><![CDATA[category: string]]></sys:String>
 								</x:Array>
 							</x0:EntityRelationshipModel.attributes>
 						</x0:EntityRelationshipModel>
