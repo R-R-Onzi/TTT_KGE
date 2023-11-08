@@ -104,6 +104,9 @@ def main(folder, **kwargs):
                 bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                 bus_stop_csv["city_area"].append("")
                 bus_stop_csv["stop_name"].append(f"{stop_line['stop_name'].iloc[0]}")
+                bus_stop_csv["stop_lat"].append(f"{stop_line['stop_lat'].iloc[0]}")
+                bus_stop_csv["stop_lon"].append(f"{stop_line['stop_lon'].iloc[0]}")
+                
                 
                 break
             next_stop_line = df_stops.loc[df_stops["stop_id"] == int(stop_times['stop_id'].iloc[i + 1])]
@@ -121,6 +124,8 @@ def main(folder, **kwargs):
                 bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                 bus_stop_csv["city_area"].append("")
                 bus_stop_csv["stop_name"].append(f"{stop_line['stop_name'].iloc[0]}")
+                bus_stop_csv["stop_lat"].append(f"{stop_line['stop_lat'].iloc[0]}")
+                bus_stop_csv["stop_lon"].append(f"{stop_line['stop_lon'].iloc[0]}")
 
                 continue
             point_lon = scale(point_lon, max_long, min_long)
@@ -137,6 +142,8 @@ def main(folder, **kwargs):
                 bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                 bus_stop_csv["city_area"].append("")
                 bus_stop_csv["stop_name"].append(f"{stop_line['stop_name'].iloc[0]}")
+                bus_stop_csv["stop_lat"].append(f"{stop_line['stop_lat'].iloc[0]}")
+                bus_stop_csv["stop_lon"].append(f"{stop_line['stop_lon'].iloc[0]}")
                 continue
 
             point_lat = scale(point_lat, max_lat, min_lat)
@@ -153,6 +160,8 @@ def main(folder, **kwargs):
                     bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                     bus_stop_csv["city_area"].append(f"{j[0]}")
                     bus_stop_csv["stop_name"].append(f"{stop_line['stop_name'].iloc[0]}")
+                    bus_stop_csv["stop_lat"].append(f"{stop_line['stop_lat'].iloc[0]}")
+                    bus_stop_csv["stop_lon"].append(f"{stop_line['stop_lon'].iloc[0]}")
                     
                     written = True
                     should_add = True
@@ -168,6 +177,8 @@ def main(folder, **kwargs):
                 bus_stop_csv["departure_time"].append(f"{stop_times_line['departure_time'].iloc[i]}")
                 bus_stop_csv["city_area"].append("")
                 bus_stop_csv["stop_name"].append(f"{stop_line['stop_name'].iloc[0]}")
+                bus_stop_csv["stop_lat"].append(f"{stop_line['stop_lat'].iloc[0]}")
+                bus_stop_csv["stop_lon"].append(f"{stop_line['stop_lon'].iloc[0]}")
 
         if(should_add):
             for i in range(len(bus_stop_csv["stop_id"])):
@@ -180,6 +191,8 @@ def main(folder, **kwargs):
                 bus_stop_csv_true["departure_time"].append(bus_stop_csv["departure_time"][i])
                 bus_stop_csv_true["city_area"].append(bus_stop_csv["city_area"][i])
                 bus_stop_csv_true["stop_name"].append(bus_stop_csv['stop_name'][i])
+                bus_stop_csv_true["stop_lat"].append(bus_stop_csv['stop_lat'][i])
+                bus_stop_csv_true["stop_lon"].append(bus_stop_csv['stop_lon'][i])
         
     pd.DataFrame(bus_stop_csv_true).to_csv("bus_stop_results.csv", index=False)
     pd.DataFrame(trip_csv).to_csv("trip_results.csv", index=False)
