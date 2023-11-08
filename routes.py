@@ -15,6 +15,7 @@ def main(folder, **kwargs):
     df_shapes = pd.read_csv(f'{folder}/{kwargs["shapes"]}', delimiter=",")
     df_stop_times = pd.read_csv(f'{folder}/{kwargs["stop_times"]}', delimiter=",")
     df_stops = pd.read_csv(f'{folder}/{kwargs["stops.csv"]}', delimiter=",")
+    df_calendar = pd.read_csv(f'{folder}/{kwargs["calendar"]}', delimiter=",")
     
     routes_csv: defaultdict = defaultdict(list)
     trip_csv: defaultdict = defaultdict(list)
@@ -63,6 +64,16 @@ def main(folder, **kwargs):
         routes_line = df_routes.loc[df_routes['route_id'] == trip_line["route_id"].iloc[0]]
         shapes_lines = df_shapes.loc[df_shapes['shape_id'] == trip_line["shape_id"].iloc[0]]
         stop_times_line = df_stop_times.loc[df_stop_times['trip_id'] == trip_id]
+        calendar = df_calendar.loc[df_calendar['service_id'] == trip_line['service_id'].iloc[0]]
+
+        weekdays = ''
+        weekdays += str(calendar['monday'].iloc[0])
+        weekdays += str(calendar['tuesday'].iloc[0])
+        weekdays += str(calendar['wednesday'].iloc[0])
+        weekdays += str(calendar['thursday'].iloc[0])
+        weekdays += str(calendar['friday'].iloc[0])
+        weekdays += str(calendar['saturday'].iloc[0])
+        weekdays += str(calendar['sunday'].iloc[0])
     
         total_dist = 0
         for i in range(len(shapes_lines["shape_pt_lon"])):
@@ -87,6 +98,7 @@ def main(folder, **kwargs):
         trip_csv["shape_id"].append(f'{trip_line["shape_id"].iloc[0]}')
         trip_csv["direction"].append(f'{trip_line["direction_id"].iloc[0]}')
         trip_csv["trip_headsign"].append(f'{trip_line["trip_headsign"].iloc[0]}')
+        trip_csv["weekdays"].append(weekdays)
 
         stop_times = df_stop_times.loc[df_stop_times['trip_id'] == f'{trip_line["trip_id"].iloc[0]}']
         bus_stop_csv: defaultdict = defaultdict(list)
@@ -256,7 +268,10 @@ if __name__ == '__main__':
             
             elif("stops.csv" in file_name):
                 f.update({"stops.csv":file_name})
+
+            elif("calendar" in file_name):
+                f.update({"calendar":file_name})
     
-    assert set(("shapes", "routes", "trips", "stop_times", "stops.csv")).issubset(set(f.keys()))
+    assert set(("shapes", "routes", "trips", "stop_times", "stops.csv", "calendar")).issubset(set(f.keys()))
                 
     main(args.folder, **f)
