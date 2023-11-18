@@ -27,7 +27,7 @@
     <!-- http://knowdive.disi.unitn.it/etype#bus_stop_GID-45937 -->
 
     <rdf:Description rdf:about="http://knowdive.disi.unitn.it/etype#bus_stop_GID-45937">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_stop"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#point_bus_stop"/>
     </rdf:Description>
     
 
