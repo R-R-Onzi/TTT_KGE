@@ -7,8 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2023/10/untitled-ontology-43">
+        <owl:imports rdf:resource="http://www.semanticweb.org/TTT/ontologies/TTT_teleology"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26"/>
-        <owl:imports rdf:resource="http://www.semanticweb.org/user/ontologies/2023/10/untitled-ontology-40"/>
     </owl:Ontology>
     
 
@@ -35,7 +35,7 @@
     <!-- http://knowdive.disi.unitn.it/etype#city_area_GID-10004 -->
 
     <rdf:Description rdf:about="http://knowdive.disi.unitn.it/etype#city_area_GID-10004">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_suburb"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lixiaoyue/ontologies/2023/2/untitled-ontology-26#polygon_city"/>
     </rdf:Description>
     
 
