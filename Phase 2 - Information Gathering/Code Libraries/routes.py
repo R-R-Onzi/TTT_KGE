@@ -103,9 +103,16 @@ def main(folder, **kwargs):
         stop_times = df_stop_times.loc[df_stop_times['trip_id'] == f'{trip_line["trip_id"].iloc[0]}']
         bus_stop_csv: defaultdict = defaultdict(list)
         should_add = False
+
+        first_bus_stop = ""
         for i in range(len(stop_times)):
 
+            stop_sequence = int(stop_times['stop_sequence'].iloc[i])
+            if stop_sequence == 1:
+                first_bus_stop = str(stop_times['stop_id'].iloc[i])                
+
             stop_line = df_stops.loc[df_stops["stop_id"] == int(stop_times['stop_id'].iloc[i])]
+
             if (len(stop_times["stop_id"]) == i + 1):
                 bus_stop_csv["stop_id"].append(f"{stop_times['stop_id'].iloc[i]}")
                 bus_stop_csv["route_id"].append(f"{trip_line['route_id'].iloc[0]}")
@@ -205,7 +212,9 @@ def main(folder, **kwargs):
                 bus_stop_csv_true["stop_name"].append(bus_stop_csv['stop_name'][i])
                 bus_stop_csv_true["stop_lat"].append(bus_stop_csv['stop_lat'][i])
                 bus_stop_csv_true["stop_lon"].append(bus_stop_csv['stop_lon'][i])
-        
+
+        trip_csv["first_bus_stop_id"].append(first_bus_stop)
+
     pd.DataFrame(bus_stop_csv_true).to_csv("bus_stop_results.csv", index=False)
     pd.DataFrame(trip_csv).to_csv("trip_results.csv", index=False)
     pd.DataFrame(routes_csv).to_csv("routes_results.csv", index=False)
