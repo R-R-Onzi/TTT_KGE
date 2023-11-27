@@ -23,7 +23,7 @@ def main(path, files):
     long = []
     lat = []
     result_csv = defaultdict(list)
-    colours = dict(zip(df["name"], itertools.count()))
+    colours = dict(zip(df["id"], itertools.count()))
 
     for i in range(df["boundary"].size):
         list_coord.extend([df["boundary"][i].replace('))', '')])
@@ -37,7 +37,7 @@ def main(path, files):
         
         min_max_long.extend(long)
         min_max_lat.extend(lat)
-        list_name_location.append([df['name'][i], [lat, long]])
+        list_name_location.append([df['id'][i], [lat, long]])
 
         long = []
         lat = []
