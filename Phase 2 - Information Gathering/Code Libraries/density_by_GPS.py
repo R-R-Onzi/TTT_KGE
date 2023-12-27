@@ -1,13 +1,11 @@
-
 import pandas as pd
-import cv2 as cv # Not actually necessary if you just want to create an image.
+import cv2 as cv 
 import numpy as np
 import argparse
 from os import walk
 import math
 from collections import defaultdict
 import itertools
-
 
 def main(path, files):
     
