@@ -32,33 +32,33 @@
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_delay -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_delay_GID-102604 -->
 
-    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_delay">
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_delay_GID-102604">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#bus_trip_GID-10005"/>
         <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#delay_GID-102604"/>
-        <rdfs:label>has_delay</rdfs:label>
+        <rdfs:label>has_delay_GID-102604</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_located_in -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_located_GID-93733 -->
 
-    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_located_in">
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_located_GID-93733">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#bus_stop_GID-45937"/>
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#facility_GID-17982"/>
         <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#city_area_GID-10004"/>
-        <rdfs:label>has_located_in</rdfs:label>
+        <rdfs:label>has_located_GID-93733</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_next_bus_stop -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_next_bus_stop_GID-10010 -->
 
-    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_next_bus_stop">
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_next_bus_stop_GID-10010">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#bus_stop_GID-45937"/>
         <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#bus_stop_GID-45937"/>
-        <rdfs:label>has_next_bus_stop</rdfs:label>
+        <rdfs:label>has_next_bus_stop_GID-10010</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -73,22 +73,22 @@
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_serves -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_serves_GID-10008 -->
 
-    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_serves">
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_serves_GID-10008">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#bus_trip_GID-10005"/>
         <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#bus_route_GID-45936"/>
-        <rdfs:label>has_serves</rdfs:label>
+        <rdfs:label>has_serves_GID-10008</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://knowdive.disi.unitn.it/etype#has_start_bus_stop -->
+    <!-- http://knowdive.disi.unitn.it/etype#has_start_bus_stop_GID-10009 -->
 
-    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_start_bus_stop">
+    <owl:ObjectProperty rdf:about="http://knowdive.disi.unitn.it/etype#has_start_bus_stop_GID-10009">
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#bus_trip_GID-10005"/>
         <rdfs:range rdf:resource="http://knowdive.disi.unitn.it/etype#bus_stop_GID-45937"/>
-        <rdfs:label>has_start_bus_stop</rdfs:label>
+        <rdfs:label>has_start_bus_stop_GID-10009</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -183,6 +183,8 @@
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#city_area_GID-10004"/>
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#delay_GID-102604"/>
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#facility_GID-17982"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#location_GID-132"/>
+        <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#schedule_GID-103679"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label>has_id_GID-10003</rdfs:label>
     </owl:DatatypeProperty>
