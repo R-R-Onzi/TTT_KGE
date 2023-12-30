@@ -5,12 +5,12 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node1hg8liessx1 a km-dev:R2RMLMapping ;
+_:node1hitvvh0ax1 a km-dev:R2RMLMapping ;
 	km-dev:sourceName "routes_results.csv" ;
-	km-dev:modelPublicationTime "1701098109852"^^xsd:long ;
+	km-dev:modelPublicationTime "1703961150474"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
-	km-dev:hasInputColumns "[[{\"columnName\":\"name\"}],[{\"columnName\":\"distance\"}],[{\"columnName\":\"route_id\"}]]" ;
-	km-dev:hasOutputColumns "[[{\"columnName\":\"name\"}],[{\"columnName\":\"distance\"}],[{\"columnName\":\"route_id\"}]]" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"distance\"}],[{\"columnName\":\"route_id\"}],[{\"columnName\":\"name\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"distance\"}],[{\"columnName\":\"route_id\"}],[{\"columnName\":\"name\"}]]" ;
 	km-dev:hasModelLabel "routes_results.csv" ;
 	km-dev:hasBaseURI "http://localhost:8080/source/" ;
 	km-dev:hasWorksheetHistory """[
@@ -208,60 +208,60 @@ _:node1hg8liessx1 a km-dev:R2RMLMapping ;
     }
 ]""" .
 
-km-dev:TriplesMap_03e12cfd-6948-4ca7-a3ef-523673b2945a a rr:TriplesMap .
+km-dev:TriplesMap_0a31af23-1bb2-4adc-a751-c4502949f5e7 a rr:TriplesMap .
 
-_:node1hg8liessx1 km-dev:hasTriplesMap km-dev:TriplesMap_03e12cfd-6948-4ca7-a3ef-523673b2945a .
+_:node1hitvvh0ax1 km-dev:hasTriplesMap km-dev:TriplesMap_0a31af23-1bb2-4adc-a751-c4502949f5e7 .
 
-km-dev:TriplesMap_03e12cfd-6948-4ca7-a3ef-523673b2945a km-dev:isPartOfMapping _:node1hg8liessx1 .
+km-dev:TriplesMap_0a31af23-1bb2-4adc-a751-c4502949f5e7 km-dev:isPartOfMapping _:node1hitvvh0ax1 .
 
-_:node1hg8liessx2 rr:tableName "routes_results.csv" ;
+_:node1hitvvh0ax2 rr:tableName "routes_results.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1hg8liessx1 .
+	km-dev:isPartOfMapping _:node1hitvvh0ax1 .
 
-_:node1hg8liessx1 km-dev:hasLogicalTable _:node1hg8liessx2 .
+_:node1hitvvh0ax1 km-dev:hasLogicalTable _:node1hitvvh0ax2 .
 
-km-dev:TriplesMap_03e12cfd-6948-4ca7-a3ef-523673b2945a rr:logicalTable _:node1hg8liessx2 ;
-	rr:subjectMap _:node1hg8liessx3 .
+km-dev:TriplesMap_0a31af23-1bb2-4adc-a751-c4502949f5e7 rr:logicalTable _:node1hitvvh0ax2 ;
+	rr:subjectMap _:node1hitvvh0ax3 .
 
-_:node1hg8liessx1 km-dev:hasSubjectMap _:node1hg8liessx3 .
+_:node1hitvvh0ax1 km-dev:hasSubjectMap _:node1hitvvh0ax3 .
 
-_:node1hg8liessx3 km-dev:isPartOfMapping _:node1hg8liessx1 ;
+_:node1hitvvh0ax3 km-dev:isPartOfMapping _:node1hitvvh0ax1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#bus_route_GID-459361" ;
 	rr:class <http://knowdive.disi.unitn.it/etype#bus_route_GID-45936> ;
 	rr:template "{route_id}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_b3a7d33e-7eb2-4b43-86f1-b43a31f3afe1 rr:predicate <http://knowdive.disi.unitn.it/etype#has_name_GID-2> .
+km-dev:PredicateObjectMap_63374090-4685-4a3e-9edf-1a39b434c673 rr:predicate <http://knowdive.disi.unitn.it/etype#has_length_GID-28281> .
 
-_:node1hg8liessx4 rr:column "name" ;
+_:node1hitvvh0ax4 rr:column "distance" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1hg8liessx1 .
+	km-dev:isPartOfMapping _:node1hitvvh0ax1 .
 
-_:node1hg8liessx1 km-dev:hasObjectMap _:node1hg8liessx4 .
+_:node1hitvvh0ax1 km-dev:hasObjectMap _:node1hitvvh0ax4 .
 
-km-dev:PredicateObjectMap_b3a7d33e-7eb2-4b43-86f1-b43a31f3afe1 rr:objectMap _:node1hg8liessx4 .
+km-dev:PredicateObjectMap_63374090-4685-4a3e-9edf-1a39b434c673 rr:objectMap _:node1hitvvh0ax4 .
 
-km-dev:TriplesMap_03e12cfd-6948-4ca7-a3ef-523673b2945a rr:predicateObjectMap km-dev:PredicateObjectMap_b3a7d33e-7eb2-4b43-86f1-b43a31f3afe1 .
+km-dev:TriplesMap_0a31af23-1bb2-4adc-a751-c4502949f5e7 rr:predicateObjectMap km-dev:PredicateObjectMap_63374090-4685-4a3e-9edf-1a39b434c673 .
 
-km-dev:PredicateObjectMap_b3a7d33e-7eb2-4b43-86f1-b43a31f3afe1 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1hg8liessx1 .
+km-dev:PredicateObjectMap_63374090-4685-4a3e-9edf-1a39b434c673 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1hitvvh0ax1 .
 
-_:node1hg8liessx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b3a7d33e-7eb2-4b43-86f1-b43a31f3afe1 .
+_:node1hitvvh0ax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_63374090-4685-4a3e-9edf-1a39b434c673 .
 
-km-dev:PredicateObjectMap_35e093b0-b45e-449c-836f-5a218766d308 rr:predicate <http://knowdive.disi.unitn.it/etype#has_length_GID-28281> .
+km-dev:PredicateObjectMap_f6222aaa-c12e-4896-a818-0e1df767ef90 rr:predicate <http://knowdive.disi.unitn.it/etype#has_name_GID-2> .
 
-_:node1hg8liessx5 rr:column "distance" ;
+_:node1hitvvh0ax5 rr:column "name" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1hg8liessx1 .
+	km-dev:isPartOfMapping _:node1hitvvh0ax1 .
 
-_:node1hg8liessx1 km-dev:hasObjectMap _:node1hg8liessx5 .
+_:node1hitvvh0ax1 km-dev:hasObjectMap _:node1hitvvh0ax5 .
 
-km-dev:PredicateObjectMap_35e093b0-b45e-449c-836f-5a218766d308 rr:objectMap _:node1hg8liessx5 .
+km-dev:PredicateObjectMap_f6222aaa-c12e-4896-a818-0e1df767ef90 rr:objectMap _:node1hitvvh0ax5 .
 
-km-dev:TriplesMap_03e12cfd-6948-4ca7-a3ef-523673b2945a rr:predicateObjectMap km-dev:PredicateObjectMap_35e093b0-b45e-449c-836f-5a218766d308 .
+km-dev:TriplesMap_0a31af23-1bb2-4adc-a751-c4502949f5e7 rr:predicateObjectMap km-dev:PredicateObjectMap_f6222aaa-c12e-4896-a818-0e1df767ef90 .
 
-km-dev:PredicateObjectMap_35e093b0-b45e-449c-836f-5a218766d308 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1hg8liessx1 .
+km-dev:PredicateObjectMap_f6222aaa-c12e-4896-a818-0e1df767ef90 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1hitvvh0ax1 .
 
-_:node1hg8liessx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_35e093b0-b45e-449c-836f-5a218766d308 .
+_:node1hitvvh0ax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f6222aaa-c12e-4896-a818-0e1df767ef90 .

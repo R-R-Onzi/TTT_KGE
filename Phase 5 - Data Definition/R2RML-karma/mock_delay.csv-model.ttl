@@ -1,0 +1,267 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1hiu0qspgx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "mock_delay.csv" ;
+	km-dev:modelPublicationTime "1703962047280"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"predicted_delay\"}],[{\"columnName\":\"delay_id\"}],[{\"columnName\":\"actual_delay\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"predicted_delay\"}],[{\"columnName\":\"delay_id\"}],[{\"columnName\":\"actual_delay\"}]]" ;
+	km-dev:hasModelLabel "mock_delay.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"delay_id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#delay_GID-1026041\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#delay_GID-1026041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604/delay_GID-1026041 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"delay_id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"delay_id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"predicted_delay\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#delay_GID-1026041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_predicted_delay_GID-10001\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604/delay_GID-1026041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"predicted_delay\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"predicted_delay\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"actual_delay\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#delay_GID-1026041\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_actual_delay_GID-10002\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#delay_GID-102604/delay_GID-1026041\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"actual_delay\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"actual_delay\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    }
+]""" .
+
+km-dev:TriplesMap_29448f20-33bf-4d9e-b7d9-e3f619af6507 a rr:TriplesMap .
+
+_:node1hiu0qspgx1 km-dev:hasTriplesMap km-dev:TriplesMap_29448f20-33bf-4d9e-b7d9-e3f619af6507 .
+
+km-dev:TriplesMap_29448f20-33bf-4d9e-b7d9-e3f619af6507 km-dev:isPartOfMapping _:node1hiu0qspgx1 .
+
+_:node1hiu0qspgx2 rr:tableName "mock_delay.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1hiu0qspgx1 .
+
+_:node1hiu0qspgx1 km-dev:hasLogicalTable _:node1hiu0qspgx2 .
+
+km-dev:TriplesMap_29448f20-33bf-4d9e-b7d9-e3f619af6507 rr:logicalTable _:node1hiu0qspgx2 ;
+	rr:subjectMap _:node1hiu0qspgx3 .
+
+_:node1hiu0qspgx1 km-dev:hasSubjectMap _:node1hiu0qspgx3 .
+
+_:node1hiu0qspgx3 km-dev:isPartOfMapping _:node1hiu0qspgx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#delay_GID-1026041" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#delay_GID-102604> ;
+	rr:template "{delay_id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_0638822f-9b7f-4330-bb61-597018bceec6 rr:predicate <http://knowdive.disi.unitn.it/etype#has_predicted_delay_GID-10001> .
+
+_:node1hiu0qspgx4 rr:column "predicted_delay" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1hiu0qspgx1 .
+
+_:node1hiu0qspgx1 km-dev:hasObjectMap _:node1hiu0qspgx4 .
+
+km-dev:PredicateObjectMap_0638822f-9b7f-4330-bb61-597018bceec6 rr:objectMap _:node1hiu0qspgx4 .
+
+km-dev:TriplesMap_29448f20-33bf-4d9e-b7d9-e3f619af6507 rr:predicateObjectMap km-dev:PredicateObjectMap_0638822f-9b7f-4330-bb61-597018bceec6 .
+
+km-dev:PredicateObjectMap_0638822f-9b7f-4330-bb61-597018bceec6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1hiu0qspgx1 .
+
+_:node1hiu0qspgx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0638822f-9b7f-4330-bb61-597018bceec6 .
+
+km-dev:PredicateObjectMap_fc8b4b0a-ac76-4574-b8cf-878be45c1a3c rr:predicate <http://knowdive.disi.unitn.it/etype#has_actual_delay_GID-10002> .
+
+_:node1hiu0qspgx5 rr:column "actual_delay" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1hiu0qspgx1 .
+
+_:node1hiu0qspgx1 km-dev:hasObjectMap _:node1hiu0qspgx5 .
+
+km-dev:PredicateObjectMap_fc8b4b0a-ac76-4574-b8cf-878be45c1a3c rr:objectMap _:node1hiu0qspgx5 .
+
+km-dev:TriplesMap_29448f20-33bf-4d9e-b7d9-e3f619af6507 rr:predicateObjectMap km-dev:PredicateObjectMap_fc8b4b0a-ac76-4574-b8cf-878be45c1a3c .
+
+km-dev:PredicateObjectMap_fc8b4b0a-ac76-4574-b8cf-878be45c1a3c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1hiu0qspgx1 .
+
+_:node1hiu0qspgx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fc8b4b0a-ac76-4574-b8cf-878be45c1a3c .

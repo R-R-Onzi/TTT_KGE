@@ -11,7 +11,7 @@ import random
 
 def main(path):
 
-    df_trip = pd.read_csv(f"{path}/trip_results.csv")
+    df_trip = pd.read_csv(f"{path}/trip_results.csv", dtype={'first_bus_stop_id': 'Int64'})
     all_ids = []
     final_rez: defaultdict = defaultdict(list)
     for i in range(df_trip["trip_id"].size):

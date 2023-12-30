@@ -1,0 +1,267 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1hitvoh9ix1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "schedules.csv" ;
+	km-dev:modelPublicationTime "1703960921394"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"arrival_time\"}],[{\"columnName\":\"departure_time\"}],[{\"columnName\":\"id\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"arrival_time\"}],[{\"columnName\":\"departure_time\"}],[{\"columnName\":\"id\"}]]" ;
+	km-dev:hasModelLabel "schedules.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"id\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-1036791\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-1036791\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679/schedule_GID-1036791 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"id\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"arrival_time\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-1036791\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_arrival_time_GID-80845\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679/schedule_GID-1036791\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"arrival_time\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"arrival_time\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"departure_time\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679\",
+                    \"DomainId\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-1036791\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://knowdive.disi.unitn.it/etype#has_departure_time_GID-80846\",
+                    \"DomainLabel\": \"http://knowdive.disi.unitn.it/etype#schedule_GID-103679/schedule_GID-1036791\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"departure_time\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"departure_time\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    }
+]""" .
+
+km-dev:TriplesMap_59f1dac6-4eea-4113-ae3f-cc9d7e45a027 a rr:TriplesMap .
+
+_:node1hitvoh9ix1 km-dev:hasTriplesMap km-dev:TriplesMap_59f1dac6-4eea-4113-ae3f-cc9d7e45a027 .
+
+km-dev:TriplesMap_59f1dac6-4eea-4113-ae3f-cc9d7e45a027 km-dev:isPartOfMapping _:node1hitvoh9ix1 .
+
+_:node1hitvoh9ix2 rr:tableName "schedules.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1hitvoh9ix1 .
+
+_:node1hitvoh9ix1 km-dev:hasLogicalTable _:node1hitvoh9ix2 .
+
+km-dev:TriplesMap_59f1dac6-4eea-4113-ae3f-cc9d7e45a027 rr:logicalTable _:node1hitvoh9ix2 ;
+	rr:subjectMap _:node1hitvoh9ix3 .
+
+_:node1hitvoh9ix1 km-dev:hasSubjectMap _:node1hitvoh9ix3 .
+
+_:node1hitvoh9ix3 km-dev:isPartOfMapping _:node1hitvoh9ix1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://knowdive.disi.unitn.it/etype#schedule_GID-1036791" ;
+	rr:class <http://knowdive.disi.unitn.it/etype#schedule_GID-103679> ;
+	rr:template "{id}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_a8775349-ca65-40a6-8242-6f01f7e09fd7 rr:predicate <http://knowdive.disi.unitn.it/etype#has_arrival_time_GID-80845> .
+
+_:node1hitvoh9ix4 rr:column "arrival_time" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1hitvoh9ix1 .
+
+_:node1hitvoh9ix1 km-dev:hasObjectMap _:node1hitvoh9ix4 .
+
+km-dev:PredicateObjectMap_a8775349-ca65-40a6-8242-6f01f7e09fd7 rr:objectMap _:node1hitvoh9ix4 .
+
+km-dev:TriplesMap_59f1dac6-4eea-4113-ae3f-cc9d7e45a027 rr:predicateObjectMap km-dev:PredicateObjectMap_a8775349-ca65-40a6-8242-6f01f7e09fd7 .
+
+km-dev:PredicateObjectMap_a8775349-ca65-40a6-8242-6f01f7e09fd7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1hitvoh9ix1 .
+
+_:node1hitvoh9ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a8775349-ca65-40a6-8242-6f01f7e09fd7 .
+
+km-dev:PredicateObjectMap_46e89b97-6225-44a1-ae70-bb5fdc56a7f7 rr:predicate <http://knowdive.disi.unitn.it/etype#has_departure_time_GID-80846> .
+
+_:node1hitvoh9ix5 rr:column "departure_time" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1hitvoh9ix1 .
+
+_:node1hitvoh9ix1 km-dev:hasObjectMap _:node1hitvoh9ix5 .
+
+km-dev:PredicateObjectMap_46e89b97-6225-44a1-ae70-bb5fdc56a7f7 rr:objectMap _:node1hitvoh9ix5 .
+
+km-dev:TriplesMap_59f1dac6-4eea-4113-ae3f-cc9d7e45a027 rr:predicateObjectMap km-dev:PredicateObjectMap_46e89b97-6225-44a1-ae70-bb5fdc56a7f7 .
+
+km-dev:PredicateObjectMap_46e89b97-6225-44a1-ae70-bb5fdc56a7f7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1hitvoh9ix1 .
+
+_:node1hitvoh9ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_46e89b97-6225-44a1-ae70-bb5fdc56a7f7 .
