@@ -45,7 +45,7 @@
 		<node id="n0">
 			<data key="d0">1</data>
 			<data key="d5">
-				<y:RectD X="-298.5" Y="394.5" Width="130" Height="104.5"/>
+				<y:RectD X="-368.5" Y="497" Width="130" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
@@ -70,7 +70,7 @@
 		<node id="n1">
 			<data key="d0">2</data>
 			<data key="d5">
-				<y:RectD X="-109.5" Y="394.5" Width="130" Height="104.5"/>
+				<y:RectD X="-109.5" Y="497" Width="130" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
@@ -95,7 +95,7 @@
 		<node id="n2">
 			<data key="d0">3</data>
 			<data key="d5">
-				<y:RectD X="79.5" Y="264" Width="130" Height="104.5"/>
+				<y:RectD X="162.5" Y="497" Width="130" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
@@ -120,15 +120,16 @@
 		<node id="n3">
 			<data key="d0">4</data>
 			<data key="d5">
-				<y:RectD X="-298.5" Y="133.5" Width="130" Height="104.5"/>
+				<y:RectD X="-249.25" Y="156.25" Width="130" Height="104.5"/>
 			</data>
 			<data key="d7">
-				<x0:EntityNodeStyle fill="#FFF7F0E8" insetFill="#FFE3D1B7" stroke="BLACK">
+				<x0:EntityNodeStyle fill="#FFE8EEF7" insetFill="#FFB7C9E3" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
 							<x0:EntityRelationshipModel.title>location_GID-132</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
+									<sys:String>gid:int</sys:String>
 									<sys:String>latitude:float</sys:String>
 									<sys:String>longitude:float</sys:String>
 								</x:Array>
@@ -160,15 +161,16 @@
 		<node id="n4">
 			<data key="d0">5</data>
 			<data key="d5">
-				<y:RectD X="79.5" Y="133.5" Width="130" Height="104.5"/>
+				<y:RectD X="203.75" Y="217.75" Width="130" Height="104.5"/>
 			</data>
 			<data key="d7">
-				<x0:EntityNodeStyle fill="#FFF7F0E8" insetFill="#FFE3D1B7" stroke="BLACK">
+				<x0:EntityNodeStyle fill="#FFE8EEF7" insetFill="#FFB7C9E3" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
 							<x0:EntityRelationshipModel.title>schedule_GID-103679</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
+									<sys:String>gid:int</sys:String>
 									<sys:String>arrival_time:string</sys:String>
 									<sys:String>departure_time:string</sys:String>
 								</x:Array>
@@ -193,13 +195,13 @@
 		<node id="n5">
 			<data key="d0">6</data>
 			<data key="d5">
-				<y:RectD X="-298.5" Y="-226.5" Width="130" Height="50"/>
+				<y:RectD X="-282.375" Y="-226.5" Width="196.25" Height="50"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="#FFECEA7D" insetFill="#FF72D864" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>osm_place</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_osm_place</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object"/>
 							</x0:EntityRelationshipModel.attributes>
@@ -237,13 +239,13 @@
 		<node id="n6">
 			<data key="d0">7</data>
 			<data key="d5">
-				<y:RectD X="-487.5" Y="-127.5" Width="130" Height="104.5"/>
+				<y:RectD X="-525" Y="-127.5" Width="167.5" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>place</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_place</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
 									<sys:String>gid:int</sys:String>
@@ -281,13 +283,13 @@
 		<node id="n7">
 			<data key="d0">8</data>
 			<data key="d5">
-				<y:RectD X="-487.5" Y="3" Width="130" Height="104.5"/>
+				<y:RectD X="-525" Y="3" Width="167.5" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>city</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_city</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object"/>
 							</x0:EntityRelationshipModel.attributes>
@@ -318,13 +320,13 @@
 		<node id="n8">
 			<data key="d0">9</data>
 			<data key="d5">
-				<y:RectD X="-487.5" Y="133.5" Width="130" Height="104.5"/>
+				<y:RectD X="-525" Y="133.5" Width="167.5" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>polygon_city</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_polygon_city</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object"/>
 							</x0:EntityRelationshipModel.attributes>
@@ -355,7 +357,7 @@
 		<node id="n9">
 			<data key="d0">10</data>
 			<data key="d5">
-				<y:RectD X="-487.5" Y="264" Width="130" Height="104.5"/>
+				<y:RectD X="-532.25" Y="326.625" Width="182" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
@@ -380,13 +382,13 @@
 		<node id="n10">
 			<data key="d0">11</data>
 			<data key="d5">
-				<y:RectD X="-298.5" Y="-127.5" Width="130" Height="104.5"/>
+				<y:RectD X="-298.5" Y="-127.5" Width="228.5" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>point_of_interest</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_point_of_interest</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
 									<sys:String>gid:int</sys:String>
@@ -424,7 +426,7 @@
 		<node id="n11">
 			<data key="d0">12</data>
 			<data key="d5">
-				<y:RectD X="-298.5" Y="3" Width="130" Height="104.5"/>
+				<y:RectD X="-268" Y="3" Width="167.5" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
@@ -448,13 +450,13 @@
 		<node id="n12">
 			<data key="d0">13</data>
 			<data key="d5">
-				<y:RectD X="-109.5" Y="-127.5" Width="130" Height="104.5"/>
+				<y:RectD X="-27.75" Y="-127.5" Width="196.25" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>transport</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_transport</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
 									<sys:String>gid:int</sys:String>
@@ -492,13 +494,13 @@
 		<node id="n13">
 			<data key="d0">14</data>
 			<data key="d5">
-				<y:RectD X="-109.5" Y="3" Width="130" Height="104.5"/>
+				<y:RectD X="-27.75" Y="-1.25" Width="196.25" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>bus_stop</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_bus_stop</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object">
 									<sys:String></sys:String>
@@ -533,13 +535,13 @@
 		<node id="n14">
 			<data key="d0">15</data>
 			<data key="d5">
-				<y:RectD X="-109.5" Y="133.5" Width="130" Height="104.5"/>
+				<y:RectD X="-27.75" Y="125" Width="196.25" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="#FFD87B64" stroke="BLACK">
 					<x0:EntityNodeStyle.model>
 						<x0:EntityRelationshipModel>
-							<x0:EntityRelationshipModel.title>point_bus_stop</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.title>Trentino_OSM_LW_point_bus_stop</x0:EntityRelationshipModel.title>
 							<x0:EntityRelationshipModel.attributes>
 								<x:Array Type="sys:Object"/>
 							</x0:EntityRelationshipModel.attributes>
@@ -570,7 +572,7 @@
 		<node id="n15">
 			<data key="d0">16</data>
 			<data key="d5">
-				<y:RectD X="-109.5" Y="264" Width="130" Height="104.5"/>
+				<y:RectD X="-109.5" Y="345.75" Width="130" Height="104.5"/>
 			</data>
 			<data key="d7">
 				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
@@ -745,6 +747,11 @@
 			</data>
 		</edge>
 		<edge id="e9" source="n15" target="n14" sourceport="p0" targetport="p1">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="59.5,232.5"/>
+				</x:List>
+			</data>
 			<data key="d13">
 				<yjs:PolylineEdgeStyle>
 					<yjs:PolylineEdgeStyle.stroke>
@@ -760,46 +767,111 @@
 			</data>
 		</edge>
 		<edge id="e10" source="n15" target="n4" sourceport="p1" targetport="p0">
+			<data key="d11">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>has_schedule_GID-103679</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Distance="5">
+								<y:SmartEdgeLabelModelParameter.Model>
+									<y:SmartEdgeLabelModel/>
+								</y:SmartEdgeLabelModelParameter.Model>
+							</y:SmartEdgeLabelModelParameter>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="WHITE" verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" font="Arial" textFill="BLACK" textSize="10"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="82.62222259822187,270"/>
+				</x:List>
+			</data>
 			<data key="d13">
 				<yjs:PolylineEdgeStyle>
 					<yjs:PolylineEdgeStyle.stroke>
-						<yjs:Stroke fill="#FF4ACC04" thickness="5"/>
+						<yjs:Stroke fill="#FF663800" thickness="5"/>
 					</yjs:PolylineEdgeStyle.stroke>
 					<yjs:PolylineEdgeStyle.targetArrow>
-						<yjs:Arrow type="TRIANGLE" stroke="#FF4ACC04" fill="#FF4ACC04" cropLength="1"/>
+						<yjs:Arrow type="TRIANGLE" stroke="#FF663800" fill="#FF663800" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
 					<yjs:PolylineEdgeStyle.sourceArrow>
-						<yjs:Arrow type="NONE" scale="5" stroke="#FF4ACC04" fill="#FF4ACC04"/>
+						<yjs:Arrow type="NONE" scale="5" stroke="#FF663800" fill="#FF663800"/>
 					</yjs:PolylineEdgeStyle.sourceArrow>
 				</yjs:PolylineEdgeStyle>
 			</data>
 		</edge>
 		<edge id="e11" source="n15" target="n3" sourceport="p2" targetport="p0">
+			<data key="d11">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>has_coordinate_GID-32628</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter Location="FromTarget" SegmentRatio="0.8116281601341844">
+								<y:SmartEdgeLabelModelParameter.Model>
+									<y:SmartEdgeLabelModel Angle="1.5707963267948966"/>
+								</y:SmartEdgeLabelModelParameter.Model>
+							</y:SmartEdgeLabelModelParameter>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="WHITE" verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" font="Arial" textFill="BLACK" textSize="10"/>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="-184.25,332.25"/>
+				</x:List>
+			</data>
 			<data key="d13">
 				<yjs:PolylineEdgeStyle>
 					<yjs:PolylineEdgeStyle.stroke>
-						<yjs:Stroke fill="#FF4ACC04" thickness="5"/>
+						<yjs:Stroke fill="#FF663800" thickness="5"/>
 					</yjs:PolylineEdgeStyle.stroke>
 					<yjs:PolylineEdgeStyle.targetArrow>
-						<yjs:Arrow type="TRIANGLE" stroke="#FF4ACC04" fill="#FF4ACC04" cropLength="1"/>
+						<yjs:Arrow type="TRIANGLE" stroke="#FF663800" fill="#FF663800" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
 					<yjs:PolylineEdgeStyle.sourceArrow>
-						<yjs:Arrow type="NONE" scale="5" stroke="#FF4ACC04" fill="#FF4ACC04"/>
+						<yjs:Arrow type="NONE" scale="5" stroke="#FF663800" fill="#FF663800"/>
 					</yjs:PolylineEdgeStyle.sourceArrow>
 				</yjs:PolylineEdgeStyle>
 			</data>
 		</edge>
 		<edge id="e12" source="n11" target="n3" sourceport="p1" targetport="p1">
+			<data key="d11">
+				<x:List>
+					<y:Label>
+						<y:Label.Text>has_coordinate_GID-32628</y:Label.Text>
+						<y:Label.LayoutParameter>
+							<y:SmartEdgeLabelModelParameter SegmentRatio="0.6">
+								<y:SmartEdgeLabelModelParameter.Model>
+									<y:SmartEdgeLabelModel Angle="1.5707963267948966"/>
+								</y:SmartEdgeLabelModelParameter.Model>
+							</y:SmartEdgeLabelModelParameter>
+						</y:Label.LayoutParameter>
+						<y:Label.Style>
+							<yjs:DefaultLabelStyle backgroundFill="WHITE" verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" textFill="BLACK">
+								<yjs:DefaultLabelStyle.font>
+									<yjs:Font fontSize="12"/>
+								</yjs:DefaultLabelStyle.font>
+							</yjs:DefaultLabelStyle>
+						</y:Label.Style>
+					</y:Label>
+				</x:List>
+			</data>
 			<data key="d13">
 				<yjs:PolylineEdgeStyle>
 					<yjs:PolylineEdgeStyle.stroke>
-						<yjs:Stroke fill="#FF4ACC04" thickness="5"/>
+						<yjs:Stroke fill="#FF663800" thickness="5"/>
 					</yjs:PolylineEdgeStyle.stroke>
 					<yjs:PolylineEdgeStyle.targetArrow>
-						<yjs:Arrow type="TRIANGLE" stroke="#FF4ACC04" fill="#FF4ACC04" cropLength="1"/>
+						<yjs:Arrow type="TRIANGLE" stroke="#FF663800" fill="#FF663800" cropLength="1"/>
 					</yjs:PolylineEdgeStyle.targetArrow>
 					<yjs:PolylineEdgeStyle.sourceArrow>
-						<yjs:Arrow type="NONE" scale="5" stroke="#FF4ACC04" fill="#FF4ACC04"/>
+						<yjs:Arrow type="NONE" scale="5" stroke="#FF663800" fill="#FF663800"/>
 					</yjs:PolylineEdgeStyle.sourceArrow>
 				</yjs:PolylineEdgeStyle>
 			</data>
@@ -808,12 +880,12 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text>SERVES</y:Label.Text>
+						<y:Label.Text>has_serves_GID-10008</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentRatio="0.5369649805447471" Distance="0.001"/>
 						</y:Label.LayoutParameter>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10"/>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10" minimumSize="0,16" maximumSize="Infinity,16"/>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
@@ -836,12 +908,12 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text>HAS</y:Label.Text>
+						<y:Label.Text>has_delay_GID-102604</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentRatio="0.5369649805447471" Distance="-0.001"/>
 						</y:Label.LayoutParameter>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10"/>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10" minimumSize="0,16" maximumSize="Infinity,16"/>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
@@ -864,7 +936,7 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[START BUS STOP]]></y:Label.Text>
+						<y:Label.Text>has_start_bus_stop_GID-10009</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter SegmentRatio="0" Distance="-4.813500000000204">
 								<y:SmartEdgeLabelModelParameter.Model>
@@ -873,11 +945,7 @@
 							</y:SmartEdgeLabelModelParameter>
 						</y:Label.LayoutParameter>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textFill="BLACK" textSize="7">
-								<yjs:DefaultLabelStyle.font>
-									<yjs:Font fontSize="7"/>
-								</yjs:DefaultLabelStyle.font>
-							</yjs:DefaultLabelStyle>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10"/>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
@@ -900,18 +968,18 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[NEXT BUS STOP]]></y:Label.Text>
+						<y:Label.Text>has_next_bus_stop_GID-10010</y:Label.Text>
 						<y:Label.LayoutParameter>
-							<y:SmartEdgeLabelModelParameter Location="FromTarget" SegmentRatio="0" Distance="6.126000000000204">
+							<y:SmartEdgeLabelModelParameter SegmentIndex="1" SegmentRatio="0.5000000000000002" Distance="0.001">
 								<y:SmartEdgeLabelModelParameter.Model>
-									<y:SmartEdgeLabelModel/>
+									<y:SmartEdgeLabelModel Angle="1.5707963267948966"/>
 								</y:SmartEdgeLabelModelParameter.Model>
 							</y:SmartEdgeLabelModelParameter>
 						</y:Label.LayoutParameter>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" textFill="BLACK" textSize="7">
+							<yjs:DefaultLabelStyle backgroundFill="WHITE" verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" backgroundStroke="WHITE" textFill="BLACK" textSize="9">
 								<yjs:DefaultLabelStyle.font>
-									<yjs:Font fontSize="7"/>
+									<yjs:Font fontSize="9"/>
 								</yjs:DefaultLabelStyle.font>
 							</yjs:DefaultLabelStyle>
 						</y:Label.Style>
@@ -920,14 +988,14 @@
 			</data>
 			<data key="d12">
 				<x:List>
-					<y:Bend Location="-16.5,294.25"/>
-					<y:Bend Location="-16.5,339.375"/>
-					<y:Bend Location="1.0625,361.6875"/>
-					<y:Bend Location="17.75,330.625"/>
-					<y:Bend Location="71.1875,330.625"/>
-					<y:Bend Location="71.1875,297.125"/>
-					<y:Bend Location="-10.625,297.125"/>
-					<y:Bend Location="19.51515151515153,308.125"/>
+					<y:Bend Location="-16.5,376"/>
+					<y:Bend Location="-16.5,421.125"/>
+					<y:Bend Location="1.0625,443.4375"/>
+					<y:Bend Location="17.75,412.375"/>
+					<y:Bend Location="71.1875,412.375"/>
+					<y:Bend Location="71.1875,378.875"/>
+					<y:Bend Location="-10.625,378.875"/>
+					<y:Bend Location="19.51515151515153,389.875"/>
 				</x:List>
 			</data>
 			<data key="d13">
@@ -948,12 +1016,12 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[LOCATED IN]]></y:Label.Text>
+						<y:Label.Text>has_located_GID-93733</y:Label.Text>
 						<y:Label.LayoutParameter>
-							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentRatio="0.5097636176772867" Distance="0.001"/>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentRatio="0.5139951474747262" Distance="0.0010000000000367493"/>
 						</y:Label.LayoutParameter>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10"/>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10" minimumSize="0,18" maximumSize="Infinity,18"/>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
@@ -976,12 +1044,12 @@
 			<data key="d11">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[LOCATED IN]]></y:Label.Text>
+						<y:Label.Text>has_located_GID-93733</y:Label.Text>
 						<y:Label.LayoutParameter>
-							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentIndex="2" SegmentRatio="0" Distance="0.001"/>
+							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" Location="FromTarget" SegmentIndex="2" SegmentRatio="0.7907002821427604" Distance="-0.001"/>
 						</y:Label.LayoutParameter>
 						<y:Label.Style>
-							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10"/>
+							<yjs:DefaultLabelStyle verticalTextAlignment="CENTER" horizontalTextAlignment="CENTER" font="Arial" textFill="BLACK" textSize="10" minimumSize="0,17" maximumSize="Infinity,17"/>
 						</y:Label.Style>
 					</y:Label>
 				</x:List>
