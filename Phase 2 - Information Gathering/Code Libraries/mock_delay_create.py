@@ -27,7 +27,14 @@ def main(path):
         final_rez['predicted_delay'].append(predicted)
         final_rez['actual_delay'].append(actual)
         id_gen += 1
-    pd.DataFrame(final_rez).to_csv("mock_delay.csv", index=False)       
+
+        df_trip.loc[df_trip['trip_id'] == id, 'delay_id'] = id_gen
+
+    pd.DataFrame(final_rez).to_csv("mock_delay.csv", index=False)
+        
+    df_trip['delay_id'] = df_trip['delay_id'].astype(int)
+    df_trip.to_csv("trip_with_mock_delay.csv", index=False)
+
 
 
 if __name__ == '__main__':
