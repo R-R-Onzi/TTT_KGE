@@ -5,7 +5,7 @@ services_path = "Data/clean_services.csv"
 schedules_path = "Data/schedules.csv"
 locations_path = "Data/locations.csv"
 
-bus_stops = pd.read_csv(bus_stops_path)
+bus_stops = pd.read_csv(bus_stops_path, dtype={'next_stop_id': 'Int64', 'city_area_id': 'Int64'})
 services = pd.read_csv(services_path)
 
 # SCHEDULES
