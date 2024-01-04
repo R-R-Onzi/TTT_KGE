@@ -8,7 +8,7 @@ Contact Information: [Eugenio Ferrari](eugenio.ferrari-1@studenti.unitn.it), [Ru
 
 This project aims at producing useful data for applications that intend to tell it's users about possible delays using the data we provide.
 The data will feature details mainly about bus stops locations
-![Figure 1](https://github.com/R-R-Onzi/TTT_KGE/blob/main/assets/images/normal.jpg)
+![Figure 1](assets/images/normal.jpg)
 using it's territory data. With that benefiting Trento inhabitants of urban areas.
 
 ## Purpose
@@ -19,7 +19,7 @@ using it's territory data. With that benefiting Trento inhabitants of urban area
 
 Given the teleology created and the lightweight ontology identified, we derived a teleontology in Protégé, in Figure 2 we report a diagram representing the results of the knowledge phase.
 
-![Figure 2](https://github.com/R-R-Onzi/TTT_KGE/blob/main/assets/images/teleology_protege_screen.PNG)
+![Figure 2](assets/images/teleology_protege_screen.PNG)
 
 - bus stop
 - city area
@@ -33,7 +33,7 @@ Given the teleology created and the lightweight ontology identified, we derived 
 
 Given the entities and property identified in the step above, we can design the purpose ER
 model as in Figure 3.
-![Figure 3](https://github.com/R-R-Onzi/TTT_KGE/blob/main/assets/images/ER_model.png)
+![Figure 3](assets/images/ER_model.png)
 
 # ETG
 
