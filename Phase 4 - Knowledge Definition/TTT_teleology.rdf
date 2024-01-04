@@ -185,7 +185,7 @@
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#facility_GID-17982"/>
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#location_GID-132"/>
         <rdfs:domain rdf:resource="http://knowdive.disi.unitn.it/etype#schedule_GID-103679"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>has_id_GID-10003</rdfs:label>
     </owl:DatatypeProperty>
     
