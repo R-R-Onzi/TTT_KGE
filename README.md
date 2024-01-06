@@ -9,7 +9,11 @@ Contact Information: [Eugenio Ferrari](eugenio.ferrari-1@studenti.unitn.it), [Ru
 This project aims at producing useful data for applications that intend to tell it's users about possible delays using the data we provide.
 The data will feature details mainly about bus stops locations
 ![Figure 1](assets/images/normal.jpg)
-using it's territory data. With that benefiting Trento inhabitants of urban areas.
+where every point is a bus stop using it's territory data. With that benefiting Trento inhabitants of urban areas.
+
+We also added facillity that could bring delays
+![Figure 4](assets/images/normal.jpg)
+where every point is a facillity
 
 ## Purpose
 
@@ -17,7 +21,7 @@ using it's territory data. With that benefiting Trento inhabitants of urban area
 
 ## Knowledge Resources
 
-Given the teleology created and the lightweight ontology identified, we derived a teleontology in Protégé, in Figure 2 we report a diagram representing the results of the knowledge phase.
+Given the teleology created and the lightweight ontology identified, we derived a teleontology in Protégé, in the following image we report a diagram representing the results of the knowledge phase.
 
 ![Figure 2](assets/images/teleology_protege_screen.PNG)
 
@@ -32,23 +36,17 @@ Given the teleology created and the lightweight ontology identified, we derived 
 ## ER Model
 
 Given the entities and property identified in the step above, we can design the purpose ER
-model as in Figure 3.
+model as in the following Figure.
 ![Figure 3](assets/images/ER_model.png)
 
-# ETG
+# Data
 
-
-# KG
-
-
-# Report
-
-
-## Presentation
+The raw data from the project can be found at this repository at [raw data](assets/images/ER_model.png) and the knoledge graphs at ![KG](assets/images/ER_model.png).
 
 ## Report
 
 [Report](Documentation/KGE_2023___Project_Report.pdf)
+
 ## GitHub
 
 [https://github.com/R-R-Onzi/TTT_KGE](https://github.com/R-R-Onzi/TTT_KGE)
