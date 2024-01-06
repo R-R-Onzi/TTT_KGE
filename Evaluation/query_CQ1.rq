@@ -1,0 +1,59 @@
+# Isabella, after lunch, wants to reach the city center, where she can find lot of shops to buy groceries 
+# to prepare sweets to her daughter. She wants to know how much time it is gonna take to reach the center, 
+# and arrive home for dinner.
+
+# assumptions 
+# after lunch 13:30:00 - 14:30:00
+# city center -> Venezia "Port'aquila"
+# Isabella home from Scenarios and Personas -> Povo -> "Spré Pinara" 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?trip ?firstStopOfTrip ?busRoute ?routeName ?routeLength ?actualDelay ?predictedDelay ?startStop ?destinationStop ?destinationStopSchedule ?destinationStopArrivalTime ?cityArea ?cityAreaName (COUNT(?facility) as ?facilityCount)
+WHERE{
+    # find starting bus stop
+    ?startStop rdf:type etype:bus_stop_GID-45937;
+    	etype:has_name_GID-2 "Spré Pinara" .
+    
+    # find destination bus stop
+    ?destinationStop rdf:type etype:bus_stop_GID-45937;
+		etype:has_name_GID-2 "Venezia \"Port'aquila\"" .
+    
+    # get schedule for arrival time
+    ?destinationStop etype:has_schedule_GID-103679 ?destinationStopSchedule .
+    ?destinationStopSchedule etype:has_arrival_time_GID-80845 ?destinationStopArrivalTime .
+    
+    # filter after lunch
+    FILTER (STRDT(STR(?destinationStopArrivalTime), xsd:time) > "13:30:00"^^xsd:time &&
+        STRDT(STR(?destinationStopArrivalTime), xsd:time) < "14:30:00"^^xsd:time)
+    
+    # get the trip
+    ?firstStopOfTrip rdf:type etype:bus_stop_GID-45937 .
+    ?trip rdf:type etype:bus_trip_GID-10005;
+          etype:has_serves_GID-10008 ?busRoute;
+          etype:has_delay_GID-102604 ?delay;
+          etype:has_start_bus_stop_GID-10009 ?firstStopOfTrip.
+    
+    # the trip should pass through the start bus stop and then through the destination
+    ?firstStopOfTrip etype:has_next_bus_stop_GID-10010* ?startStop .    
+    ?startStop etype:has_next_bus_stop_GID-10010* ?destinationStop .
+    
+    # get route information
+    ?busRoute etype:has_name_GID-2 ?routeName;
+              etype:has_length_GID-28281 ?routeLength .
+        
+    # get delay of the trip
+    ?delay etype:has_actual_delay_GID-10002 ?actualDelay;
+           etype:has_predicted_delay_GID-10001 ?predictedDelay .
+    
+    # get destination area and facilities in that area
+    ?destinationStop etype:has_located_GID-93733 ?cityArea . 
+    ?cityArea etype:has_name_GID-2 ?cityAreaName .
+    
+    ?facility rdf:type etype:facility_GID-17982; 
+              etype:has_located_GID-93733 ?cityArea .
+}
+GROUP BY ?trip ?firstStopOfTrip ?busRoute ?routeName ?routeLength ?actualDelay ?predictedDelay ?startStop ?destinationStop ?destinationStopSchedule ?destinationStopArrivalTime ?cityArea ?cityAreaName
+LIMIT 5
