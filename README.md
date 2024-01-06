@@ -37,9 +37,10 @@ Given the teleology created and the lightweight ontology identified, we derived 
 
 Given the entities and property identified in the step above, we can design the purpose ER
 model as in the following Figure.
+
 ![Figure 3](assets/images/ER_model.png)
 
-# Data
+## Data
 
 The raw data from the project can be found at this repository at [raw data](assets/images/ER_model.png) and the knoledge graphs at ![KG](assets/images/ER_model.png).
 
