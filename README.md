@@ -42,7 +42,7 @@ model as in the following Figure.
 
 ## Data
 
-The raw data from the project can be found at this repository at [raw data](https://github.com/R-R-Onzi/TTT_KGE/tree/main/Phase%202%20-%20Information%20Gathering/Code%20Libraries/Data) and the knoledge graphs at ![KG](https://github.com/R-R-Onzi/TTT_KGE/tree/main/Phase%205%20-%20Data%20Definition).
+The raw data from the project can be found at this repository at [raw data](https://github.com/R-R-Onzi/TTT_KGE/tree/main/Phase%202%20-%20Information%20Gathering/Code%20Libraries/Data) and the knoledge graphs at [KG](https://github.com/R-R-Onzi/TTT_KGE/tree/main/Phase%205%20-%20Data%20Definition).
 
 ## Report
 
