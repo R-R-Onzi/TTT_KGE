@@ -1,0 +1,45 @@
+# 5 - After enjoying a dinner with his friends, Giovanni decide to head to one of his friend's houses in Martignano. They are fortunate to be right on schedule for the last bus. The buses to Martignano are usually punctual, as the area had fewer residents compared to the city center, resulting in less traffic. They want to confirm if the bus will run on time so that they can arrive at their destination on time. 
+
+# from "Piazza di Fiera" 
+# to "Martignano P.Zza Menghin"
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX etype: <http://knowdive.disi.unitn.it/etype#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?trip ?busRoute ?routeName ?routeLength ?actualDelay ?predictedDelay ?startStop ?destinationStop ?startStopDepartutreTime ?cityAreaName ?populationDensity
+WHERE{
+    ?startStop rdf:type etype:bus_stop_GID-45937;
+    	etype:has_name_GID-2 "Cervara \"Port'aquila\"" .
+    
+    ?destinationStop rdf:type etype:bus_stop_GID-45937;
+		etype:has_name_GID-2 "Martignano P.Zza Menghin" .
+    
+  	# get the departure time from the start stop
+    ?startStop etype:has_schedule_GID-103679 ?schedule .
+    ?schedule etype:has_departure_time_GID-80846 ?startStopDepartutreTime .
+    
+    # departure after dinner 
+    FILTER (STRDT(STR(?startStopDepartutreTime), xsd:time) > "20:00:00"^^xsd:time)
+    
+    ?firstStopOfTrip rdf:type etype:bus_stop_GID-45937 .
+    ?trip rdf:type etype:bus_trip_GID-10005;
+          etype:has_serves_GID-10008 ?busRoute;
+          etype:has_delay_GID-102604 ?delay;
+          etype:has_start_bus_stop_GID-10009 ?firstStopOfTrip.
+    
+    ?firstStopOfTrip etype:has_next_bus_stop_GID-10010* ?startStop .
+    ?startStop etype:has_next_bus_stop_GID-10010* ?destinationStop .
+    
+    ?busRoute etype:has_name_GID-2 ?routeName;
+              etype:has_length_GID-28281 ?routeLength .
+    FILTER (?routeName = "10") # to martignano
+        
+    ?delay etype:has_actual_delay_GID-10002 ?actualDelay;
+           etype:has_predicted_delay_GID-10001 ?predictedDelay .
+    
+    ?destinationStop etype:has_located_GID-93733 ?cityArea . 
+    ?cityArea etype:has_name_GID-2 ?cityAreaName;
+              etype:has_population_density_GID-118000 ?populationDensity.
+}
+LIMIT 5
