@@ -50,7 +50,7 @@ The raw data from the project can be found at this repository at [raw data](http
 
 ## Presentation
 
-[Report](Documentation/KGE_2023_Presentation.pdf)
+[Presentation](Documentation/KGE_2023_Presentation.pdf)
 
 ## GitHub
 
