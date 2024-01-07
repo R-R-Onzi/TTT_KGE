@@ -48,6 +48,10 @@ The raw data from the project can be found at this repository at [raw data](http
 
 [Report](Documentation/KGE_2023___Project_Report.pdf)
 
+## Presentation
+
+[Report](Documentation/KGE_2023_Presentation.pdf)
+
 ## GitHub
 
 [https://github.com/R-R-Onzi/TTT_KGE](https://github.com/R-R-Onzi/TTT_KGE)
